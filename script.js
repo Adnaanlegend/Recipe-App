@@ -74,6 +74,8 @@ function addMeal(mealData, random = false) {
         }
 
         fetchFavMeals();
+
+        console.log();
     });
 
     meal.addEventListener("click", () => {
@@ -163,6 +165,8 @@ function showMealInfo(mealData) {
 
     const ingredients = [];
 
+
+    //Comment
 
     for(let i=1; i<=20;i++){
         if(mealData["strIngredient" + i]) {
