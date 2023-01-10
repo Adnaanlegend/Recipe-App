@@ -15,6 +15,10 @@ body{
     min-height: 100vh;
 }
 
+body::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
+
 img{
     max-width: 100%;
 
@@ -57,12 +61,19 @@ header button{
 }
 
 .fav-meals{
-    display: flex;
-    flex-wrap:wrap;
-    justify-content: center;
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 1rem;
+    overflow-y: auto;
+    /* flex-wrap:wrap;
+    justify-content: center; */
     list-style-type: none;
     padding: 0;
 }
+
+
+
+
 
 .fav-meals li {
     cursor: pointer;
@@ -196,6 +207,27 @@ header button{
 
 .meal-info h1 {
     text-align: center;
+}
+
+.author{
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    bottom: 56px;
+    left: 45%;
+    transform: translateX(-10%);
+    z-index: 10;
+    font-size: 25px;
+}
+
+p {
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: #ed93ff;
 }
 
 
